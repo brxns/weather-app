@@ -31,20 +31,16 @@ function newCity(event) {
   let apiKey = "8a2b906d2e66cbae91442329a5210f3e";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(currentTemp);
-  
 }
 //Weather
 function currentTemp(response) {
   let tempElement = document.querySelector("#temp");
   let temperature = Math.round(response.data.main.temp);
   tempElement.innerHTML = `${temperature}°C`;
-  let moreInfo = document.querySelector(".moreinfo")
-  let weatherDescription = (response.data.weather[0].description)
-  console.log(response)
-  moreInfo.innerHTML = weatherDescription
+  let moreInfo = document.querySelector(".moreinfo");
+  let weatherDescription = response.data.weather[0].description;
+  console.log(response);
+  moreInfo.innerHTML = weatherDescription;
 }
 let searchBar = document.querySelector(".search-form");
 searchBar.addEventListener("submit", newCity);
-
-
-
