@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="W5project.css" />
+ <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  </head>
+ <body>
+    <div class="container">
+      <div class="header">
+        <form class="search-form">
+          <input
+            id="search-bar"
+            type="search"
+            placeholder="London, New York ..."
+            class="searchbar"
+            autocomplete="off"
+            autofocus= "off"
+          />
+          <button type="submit" class="searchbutton" id="#search-button">Search</button>
+      </div>
+      <div class="content">
+        <h1 class="city" id="city">Where to?</h1>
+        <p class="datetime" id="date-time">date time</p>
+        <p class="current">Currently
+         
+        </p>
+        <h2 class="temp" id="temp">17°</h2>
+      
+      <p class="moreinfo">
+          Cloudy <br />
+          Chance of rain
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col">Tomorrow <br />🌤 <br />15°C / 15°C</div>
+        <div class="col">Saturday <br />🌤 <br />16°C / 23°C</div>
+        <div class="col">Sunday <br />☀️ <br />18°C / 23°C</div>
+        <div class="col">Monday <br />🌤 <br />16°C / 20°C</div>
+        <div class="col">
+          Tuesday <br />🌦<br />
+          15°C / 18°C
+        </div>
+      </div>
+    </div>
+    <script src="W5project.js"></script>
+  </body>
+</html>

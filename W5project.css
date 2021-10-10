@@ -1,0 +1,89 @@
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: capitalize;
+}
+.searchbar {
+  position: relative;
+  margin: 0 auto;
+  padding: 5px 10px;
+  display: block;
+  border-radius: 10px;
+  border: transparent;
+  background-color: rgb(215, 226, 240);
+  text-transform: capitalize;
+}
+.searchbar:hover {
+  transition: 150ms ease-in-out;
+  border: 2px solid rgb(147, 174, 224);
+}
+.searchbutton {
+  margin: 0 auto;
+  margin-top: 5px;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid rgb(239, 239, 240);
+}
+.searchbutton:hover {
+  transition: 150ms ease-in-out;
+  border: 2px solid rgb(147, 174, 224);
+}
+
+.city {
+  text-align: center;
+}
+.datetime {
+  text-align: center;
+}
+.current {
+  font-size: 20px;
+  margin-left: 30px;
+}
+.temp {
+  margin-top: -15px;
+  margin-left: 30px;
+}
+
+.container {
+  background-color: rgb(215, 226, 240);
+  width: 500px;
+  border-radius: 30px;
+}
+.searchbar {
+  margin-top: 10px;
+}
+h2 {
+  position: relative;
+  left: 8px;
+  margin: -10px 0;
+  font-size: 40px;
+}
+.units {
+  display: block;
+  margin: 5px;
+}
+
+.moreinfo {
+  margin-top: 70px;
+  position: relative;
+  right: -350px;
+  bottom: 125px;
+  font-size: 20px;
+  max-width: 125px;
+}
+.weatheremoji {
+  position: relative;
+  left: 45px;
+}
+.row {
+  margin-top: -75px;
+  display: flex;
+  flex-direction: row;
+}
+.col {
+  text-align: center;
+  background-color: rgb(242, 244, 248);
+  border-radius: 30px;
+  margin-bottom: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
