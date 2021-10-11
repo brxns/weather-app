@@ -1,12 +1,12 @@
 body {
   font-family: "Roboto Condensed", sans-serif;
-  text-transform: capitalize;
+ 
 }
+
 .searchbar {
-  position: relative;
-  margin: 0 auto;
-  padding: 5px 10px;
   display: block;
+  margin: 0 auto;
+  padding: 10px 0 5px;
   border-radius: 10px;
   border: transparent;
   background-color: rgb(215, 226, 240);
@@ -25,11 +25,13 @@ body {
 }
 .searchbutton:hover {
   transition: 150ms ease-in-out;
-  border: 2px solid rgb(147, 174, 224);
+  background-color: 1px solid rgb(147, 174, 224);
 }
 
 .city {
+  margin-top: 5px;
   text-align: center;
+  text-transform: capitalize;
 }
 .datetime {
   text-align: center;
@@ -38,11 +40,21 @@ body {
   font-size: 20px;
   margin-left: 30px;
 }
-.temp {
-  margin-top: -15px;
+.temp strong {
   margin-left: 30px;
+  font-size: 55px;
 }
-
+.temp{
+  margin-top: -15px;
+  font-size: 20px;
+}
+.metric{
+ color: inherit;
+  
+}
+.imperial{
+   color: inherit;
+}
 .container {
   background-color: rgb(215, 226, 240);
   width: 500px;
@@ -52,32 +64,23 @@ body {
   margin-top: 10px;
 }
 h2 {
-  position: relative;
-  left: 8px;
-  margin: -10px 0;
-  font-size: 40px;
-}
-.units {
-  display: block;
-  margin: 5px;
-}
 
+  font-size: 45px;
+}
 .moreinfo {
   margin-top: 70px;
   position: relative;
-  right: -350px;
-  bottom: 125px;
-  font-size: 20px;
-  max-width: 125px;
+  right: -280px;
+  bottom: 145px;
+  font-size: 17px;
+  text-transform: capitalize;
+  list-style-type: none;
 }
-.weatheremoji {
-  position: relative;
-  left: 45px;
-}
+
 .row {
-  margin-top: -75px;
   display: flex;
   flex-direction: row;
+  margin-top: -105px;
 }
 .col {
   text-align: center;

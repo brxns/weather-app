@@ -34,13 +34,44 @@ function newCity(event) {
 }
 //Weather
 function currentTemp(response) {
+  //display temperature
   let tempElement = document.querySelector("#temp");
   let temperature = Math.round(response.data.main.temp);
-  tempElement.innerHTML = `${temperature}°C`;
-  let moreInfo = document.querySelector(".moreinfo");
+  tempElement.innerHTML = `${temperature}°`;
+  //display weather description
+  let moreInfo = document.querySelector(".description");
   let weatherDescription = response.data.weather[0].description;
-  console.log(response);
   moreInfo.innerHTML = weatherDescription;
+  //display feel like
+  let feelsLike = document.querySelector(".feel")
+  let feelsLikeResponse = Math.round(response.data.main.feels_like);
+  feelsLike.innerHTML = `Feels like ${feelsLikeResponse}°`
+//display windspeed
+  let windspeed = document.querySelector(".wind-speed");
+  let windspeedResponse = Math.round(response.data.wind.speed);
+  windspeed.innerHTML = `${windspeedResponse} mph`
+
+  celsiusTemp = response.data.main.temp;
 }
 let searchBar = document.querySelector(".search-form");
 searchBar.addEventListener("submit", newCity);
+
+//units
+
+function convertToFahrenheit(event){ 
+  event.preventDefault() 
+let newImperialTemp = (celsiusTemp * 9)/5 + 32
+temp.innerHTML =`${Math.round(newImperialTemp)}°` 
+}
+function convertToCelsius (event){
+event.preventDefault();
+temp.innerHTML = `${Math.round(celsiusTemp)}°`;
+}
+
+//made celsiusTemp and temp into global elements so that i could call it from inside functions.
+let temp = document.querySelector("#temp")
+let celsiusTemp = null;
+let fahrenheit = document.querySelector(".imperial")
+fahrenheit.addEventListener("click", convertToFahrenheit)
+let celsius = document.querySelector(".metric")
+celsius.addEventListener("click", convertToCelsius)
