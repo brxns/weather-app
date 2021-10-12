@@ -76,3 +76,8 @@ let celsius = document.querySelector(".metric");
 celsius.addEventListener("click", convertToCelsius);
 
 //Additional forecast
+function displayForecast(){
+  let forecastElement = document.querySelector("#forecast");
+forecastElement.innerHTML = "Forecast"
+}
+displayForecast()
