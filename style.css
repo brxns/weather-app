@@ -1,10 +1,9 @@
 body {
   font-family: "Roboto Condensed", sans-serif;
-  color: white
+  color: white;
 }
-.search-form{
+.search-form {
   padding: 15px;
-
 }
 
 .searchbar {
@@ -48,21 +47,28 @@ body {
   margin-left: 30px;
   font-size: 55px;
 }
-.temp{
+.temp {
   margin-top: -15px;
   font-size: 20px;
 }
-.metric{
- color: inherit;
-  
+.metric {
+  color: inherit;
 }
-.imperial{
-   color: inherit;
+.imperial {
+  color: inherit;
 }
 .container {
- background: #C33764;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #c33764; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #1d2671,
+    #c33764
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #1d2671,
+    #c33764
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   width: 500px;
 
   border-radius: 30px;
@@ -71,7 +77,6 @@ background: linear-gradient(to right, #1D2671, #C33764); /* W3C, IE 10+/ Edge, F
   margin-top: 10px;
 }
 h2 {
-
   font-size: 45px;
 }
 .moreinfo {
@@ -84,8 +89,18 @@ h2 {
   text-transform: capitalize;
   list-style-type: none;
 }
+.col-2 {
+  margin: 0 10px 15px 10px;
+}
+.forecast-day{
+  text-align: center;
+}
+.forecast-day, .min{
+  opacity: 0.7;
+}
+
 
 .source {
-text-align: center;
-font-size: smaller;
+  text-align: center;
+  font-size: smaller;
 }
