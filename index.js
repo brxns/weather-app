@@ -59,12 +59,12 @@ function currentTemp(response) {
 let searchBar = document.querySelector(".search-form");
 searchBar.addEventListener("submit", newCity);
 
-//future forecast axios call function 
+//future forecast axios call function
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=8a2b906d2e66cbae91442329a5210f3e&units=metric`;
   console.log(apiUrl);
-  axios.get(apiUrl).then(displayForecast)
+  axios.get(apiUrl).then(displayForecast);
 }
 
 //units
@@ -87,8 +87,21 @@ celsius.addEventListener("click", convertToCelsius);
 
 //Additional forecast
 function displayForecast(response) {
-  console.log(response.data.daily)
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
-  forecastElement.innerHTML = "Forecast";
+  let forecastHTML = `<div class="row">`;
+  forecast.forEach(function (forecastDay) {
+    console.log(forecastDay)
+    forecastHTML =
+    forecastHTML +
+    `
+          <div class="col-2">
+           <div class="forecast-day">${forecastDay.dt}</div>
+            <div class="max-min-temp">
+                 <span class="max">${forecastDay.temp.max}</span> / <span class="min">${forecastDay.temp.min}</span>
+                        
+            </div>
+           </div>   
+         </div>`;
+  });
 }
-
