@@ -89,16 +89,18 @@ h2 {
   text-transform: capitalize;
   list-style-type: none;
 }
-.col-2 {
-  margin: 0 10px 15px 10px;
-}
-.forecast-day{
-  text-align: center;
-}
-.forecast-day, .min{
-  opacity: 0.7;
-}
 
+.forecast-container{
+  display: grid;
+  text-align: center;
+  /* you must assign a size for each item in the container 
+  or it'll be pushed onto the next row*/
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+}
+.grid-item1, .grid-item2, .grid-item3, .grid-item4{
+  background-color: black;
+}
 
 .source {
   text-align: center;
