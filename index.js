@@ -34,6 +34,7 @@ function newCity(event) {
   calling another function, i only need to create this variable once*/
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(currentTemp);
+
 }
 //Weather HTML display
 function currentTemp(response) {
@@ -70,7 +71,6 @@ function getForecast(coordinates) {
   //call another function to display the weather and get future forecast
   axios.get(apiUrl).then(displayForecast);
 }
-
 //units conversion
 function convertToFahrenheit(event) {
   event.preventDefault();
@@ -89,29 +89,49 @@ fahrenheit.addEventListener("click", convertToFahrenheit);
 let celsius = document.querySelector(".metric");
 celsius.addEventListener("click", convertToCelsius);
 
+function formatDay(dt){
+let date = new Date(dt *1000);
+let day = date.getDay();
+let days= [
+  "Sun",
+  "Mon",
+  "Tue",
+  "Wed",
+  "Thu",
+  "Fri",
+  "Sat",
+];
+return days[day]
+}
+
+
+
+
 //Additional future forecast
-function displayForecast() {
+function displayForecast(response) {
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Thu", "Fri", "Sat", "Sun"];
 
-  let forecastHTML = `<div class="row">`;
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+let forecastHTML = `<div class="row">`;
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 4){
+     forecastHTML += `
       <div class="col-2">
-        <div class="weather-forecast-date">${day}</div>
+        <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
         <div class="weather-forecast-temperatures">
-          <span class="weather-forecast-temperature-max"> 18° </span>
-          <span class="weather-forecast-temperature-min"> 12° </span>
+          <span class="weather-forecast-temperature-max"> ${Math.round(
+            forecastDay.temp.max
+          )}° |</span>
+          <span class="weather-forecast-temperature-min"> ${Math.round(
+            forecastDay.temp.min
+          )}° </span>
         </div>
       </div>
-  `;
+  `; 
+    }
   });
-
-  forecastHTML = forecastHTML + `</div>`;
+  forecastHTML += `</div>`;
   forecastElement.innerHTML = forecastHTML;
-  console.log(forecastHTML);
+
 }
-displayForecast()

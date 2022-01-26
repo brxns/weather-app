@@ -90,13 +90,15 @@ h2 {
   list-style-type: none;
 }
 .row{
+  display: flex;
+  justify-content: center;
   margin-bottom: 15px;
-  display: 0 auto;
+ 
 }
 .col-2{
   display:inline-block;
-  margin: 10px;
-  text-align: center;
+  margin: 10px; 
+
 }
 .weather-forecast-temperature-max{
   color: white;
