@@ -90,14 +90,28 @@ let celsius = document.querySelector(".metric");
 celsius.addEventListener("click", convertToCelsius);
 
 //Additional future forecast
-function displayForecast(response) {
-  let forecast = response.data.daily;
+function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
-  forecast.forEach(function (forecastDay) {
-    console.log(forecastDay)
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
     forecastHTML =
-    forecastHTML +
-    
+      forecastHTML +
+      `
+      <div class="col-2">
+        <div class="weather-forecast-date">${day}</div>
+        <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature-max"> 18° </span>
+          <span class="weather-forecast-temperature-min"> 12° </span>
+        </div>
+      </div>
+  `;
   });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
 }
+displayForecast()

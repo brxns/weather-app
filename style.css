@@ -89,17 +89,21 @@ h2 {
   text-transform: capitalize;
   list-style-type: none;
 }
-
-.forecast-container{
-  display: grid;
-  text-align: center;
-  /* you must assign a size for each item in the container 
-  or it'll be pushed onto the next row*/
-  grid-template-columns: auto auto auto auto;
-  gap: 10px;
+.row{
+  margin-bottom: 15px;
+  display: 0 auto;
 }
-.grid-item1, .grid-item2, .grid-item3, .grid-item4{
-  background-color: black;
+.col-2{
+  display:inline-block;
+  margin: 10px;
+  text-align: center;
+}
+.weather-forecast-temperature-max{
+  color: white;
+}
+.weather-forecast-temperature-min{
+  color: gainsboro;
+  display: inline;
 }
 
 .source {
