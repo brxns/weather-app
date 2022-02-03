@@ -89,21 +89,20 @@ h2 {
   text-transform: capitalize;
   list-style-type: none;
 }
-.row{
+.row {
   display: flex;
   justify-content: center;
   margin-bottom: 15px;
- 
+  text-align: center;
 }
-.col-2{
-  display:inline-block;
-  margin: 10px; 
 
+.weather-forecast-temperatures {
+  padding: 20px;
 }
-.weather-forecast-temperature-max{
+.weather-forecast-temperature-max {
   color: white;
 }
-.weather-forecast-temperature-min{
+.weather-forecast-temperature-min {
   color: gainsboro;
   display: inline;
 }
