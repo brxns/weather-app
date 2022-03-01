@@ -2,6 +2,9 @@ body {
   font-family: "Roboto Condensed", sans-serif;
   color: white;
 }
+.container{
+  margin-top: 20px;
+}
 .search-form {
   padding: 15px;
 }
